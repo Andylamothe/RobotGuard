@@ -39,3 +39,35 @@ pip3 install adafruit-circuitpython-ht16k33
 sudo pip3 install adafruit-circuitpython-ads1x15 --break-system-packages
 sudo pip3 install adafruit-circuitpython-charlcd --break-system-packages
 ```
+
+##  Installation complète :
+
+### Installation du projet
+
+1. Clonez ce dépôt :
+```bash
+git clone https://github.com/ton-utilisateur/RobotGuard.git
+```
+
+#### Accédez au répertoire du projet :
+```bash
+cd RobotGuard
+```
+
+#### Installez les dépendances requises :
+```bash
+pip3 install -r requirements.txt
+```
+
+#### Connectez les composants matériels selon le schéma de câblage décrit ci-dessous.
+
+#### Lancez le script Python principal :
+```bash
+python3 main.py
+```
+
+
+### Auteurs
+
+- **Andy lamothe** - Développement initial
+- **Yislaine Perez** - Développement initial
