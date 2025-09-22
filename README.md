@@ -1,26 +1,41 @@
-# AppPythonRobotic
-Premier Projet robotique que j'ai fait avec python
+# 🤖 RobotGuard: Système de Sécurité Robotique avec Python
 
-Le programme va démarrer le moteur avec la fan et le Ultasonic sensor va commencer à envoyer du son qui va nous donner la distance, si la distance est de moins de 15 cm, le moteur va arrêter et Le LED 8X8 va afficher un point d'interrogation. Également, le LCD va afficher constamment la distance en cm. Si la distance est a moins de 10 cm, la LED8x8 va afficher une croix avec la lumière et l'écran LCD va remplacer le message de la distance en cm par un message de danger. 
+## Description du projet :
+RobotGuard est un projet robotique simple développé en Python, utilisant une combinaison de capteurs et d'affichages pour créer un système de sécurité autonome. Ce programme contrôle un moteur, un ventilateur, un capteur ultrason, une LED 8x8, et un écran LCD pour détecter les obstacles et afficher des informations critiques en temps réel.
 
-On va utiliser des librairies : 
-- import board 
-- import digitalio 
-- import adafruit_character_lcd.character_lcd as CharLCD 
-- from time import sleep 
-- Import pigpio 
--  from adafruit_ads1x15.ads1115 import P0 
-- from adafruit_ads1x15.ads1115 import ADS1115 
-- from adafruit_ads1x15.analog_in import AnalogIn 
-- import adafruit_bus_device.i2c_device as i2c_device 
-- from adafruit_ht16k33 import matrix 
+## Fonctionnement du système :
 
- 
+Moteur et Ventilateur : Au démarrage, le moteur et le ventilateur sont activés.
 
-Pour les installer faire ces commandes;  
+Capteur Ultrason : Un capteur ultrason émet des ondes sonores et mesure la distance entre le robot et un obstacle. Si la distance est inférieure à 15 cm, le moteur s'arrête immédiatement.
 
-pip3 install adafruit-circuitpython-ht16k33 
+Affichage LED 8x8 : Si l'obstacle est détecté à moins de 15 cm, le module LED 8x8 affiche un point d'interrogation (?). Si la distance est inférieure à 10 cm, la LED affiche une croix, signalant un danger imminent.
 
-sudo pip3 install adafruit-circuitpython-ads1x15 --break-system-packages 
+Affichage LCD : L'écran LCD affiche constamment la distance en centimètres. Si la distance devient inférieure à 10 cm, le message sur l'écran LCD est remplacé par un avertissement de "DANGER".
 
-sudo pip3 install adafruit-circuitpython-charlcd --break-system-packages 
+## Librairies utilisées :
+
+board
+
+* digitalio
+
+* adafruit_character_lcd.character_lcd pour l'écran LCD
+
+* time pour les délais
+
+* pigpio pour le contrôle des GPIO
+
+* adafruit_ads1x15.ads1115 et adafruit_ads1x15.analog_in pour la lecture des capteurs analogiques
+
+* adafruit_bus_device.i2c_device pour la gestion des périphériques I2C
+
+* adafruit_ht16k33 pour le contrôle du module LED 8x8
+
+* Installation des dépendances :
+
+### Pour installer les bibliothèques nécessaires, exécutez les commandes suivantes :
+```bash
+pip3 install adafruit-circuitpython-ht16k33
+sudo pip3 install adafruit-circuitpython-ads1x15 --break-system-packages
+sudo pip3 install adafruit-circuitpython-charlcd --break-system-packages
+```
